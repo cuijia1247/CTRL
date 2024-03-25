@@ -28,8 +28,13 @@ All the files in 'data', 'features', 'pretrainedModels' and 'backup' are uploade
 
 #### Code Usages
 
-The full codes will be released after the paper published
-1. download datasets 
+The full codes will be released after the paper published. All the necessary files can be downloaded from the link below:
+xxxxxxx
+1. download 'Painting91' into 'data' folder;
+2. download 'pretrainModel' folder into the project root;
+3. download Painting91_resnet_CLS and Painting91_resnet_SLC files into the 'models' folder;
+4. revise the configurations ini run_test.py
+5. python run_test.py
 
 #### Todo-list
 
