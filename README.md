@@ -28,13 +28,37 @@ All the files in 'data', 'features', 'pretrainedModels' and 'backup' are uploade
 
 #### Code Usages
 
-The full codes will be released after the paper published. All the necessary files can be downloaded from the link below:
-xxxxxxx
+The full codes will be released after the paper published. All the necessary files can be downloaded from the Baidu Yun link below:
+Link：https://pan.baidu.com/s/1cMUIOUjXKR8-PPpJ0ra3Hw 
+Code：noyg
 1. download 'Painting91' into 'data' folder;
 2. download 'pretrainModel' folder into the project root;
 3. download Painting91_resnet_CLS and Painting91_resnet_SLC files into the 'models' folder;
 4. revise the configurations ini run_test.py
 5. python run_test.py
+
+#### Experiment Results with SOTA
+
+|                     | Painting91 | Pandora | WikiArt3 | Arch  | FashionStyle14 | AVAStyle |
+|---------------------|------------|---------|----------|-------|----------------|----------|
+| VGG16               | 58.42      | 49.73   | 40.02    | 61.41 | 68.22          | 39.94    |
+| VGG19               | 58.11      | 46.44   | 39.93    | 60.11 | 66.14          | 40.02    |
+| ResNet50            | 64.93      | 51.65   | 47.01    | 65.12 | 71.13          | 40.05    |
+| Resnet101           | 65.50      | 52.61   | 46.11    | 66.42 | 70.00          | 47.02    |
+| InceptionV3         | 53.41      | 42.83   | 36.68    | 61.52 | 62.70          | 33.33    |
+| DAE                 | 58.82      | 48.71   | 41.48    | 58.55 | 61.48          | 41.46    |
+| SAE                 | 63.65      | 48.64   | 41.53    | 59.61 | 74.33          | 40.29    |
+| SSCAE               | 64.07      | 49.38   | 43.65    | 60.48 | **75.02**          | 45.77    |
+| DDS                 | 62.21      | 52.35   | 43.17    | /     | /              | /        |
+| MCFFNet             | 66.60      | 51.39   | 45.51    | **66.12** | 68.38          | 42.69    |
+| STACLE              | 60.41      | 55.80   | 47.21    | 60.81 | 64.47          | 46.38    |
+| TCFL+VGG16(TOP1)    | **67.39**      | **56.67**   | **47.85**    | 65.57 | 71.67          | **47.22**    |
+| TCFL+VGG16(TOP2)    | 83.19      | 74.92   | 66.99    | 78.12 | 85.69          | 63.92    |
+| TCFL+VGG16(TOP3)    | 92.27      | 84.52   | 78.22    | 85.05 | 91.11          | 75.74    |
+| TCFL+ResNet50(TOP1) | **69.12**      | **56.98**   | **51.62**    | **69.03** | **77.17**          | **53.94**    |
+| TCFL+ResNet50(TOP2) | 85.29      | 76.15   | 69.11    | 81.82 | 87.44          | 68.68    |
+| TCFL+ResNet50(TOP3) | 92.27      | 84.52   | 78.22    | 85.05 | 91.10          | 75.74    |
+
 
 #### Todo-list
 
