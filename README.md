@@ -76,7 +76,6 @@ Code：noyg
 - [x] how to identify the style level?
   - [x] try random set the style levels
   - [x] add level attribute in Dataset
-  - [ ] <mark>the cluster algorithms maybe useful for potential key contribution</mark> potiental unsupervised style classification
 - [x] add the style level computation into the painting91 to test the SSCAE
   - [x] make the generated new features into the circle
   - [x] add setLevels function in SCLdataset.py
@@ -92,7 +91,6 @@ Code：noyg
   - [x] add different loss calculation for different sae class
   - [x] add the NN features calculation codes
   - [x] add classification loss into the sae loss, see what will happen
-  - [ ] <mark>how to find the NN, maybe the potential key contribution</mark>
   - [x] re-write CDAutoEncoder class, the backward_pass should be changed
   - [x] find style similarity algorithms to replace the L2-norm
     - [x] customize loss class in 'utils/'
@@ -101,7 +99,7 @@ Code：noyg
     - [x] try cityblock distance
     - [x] try chebyshev distance
     - [x] try DotProductSimilarity
-  - [ ] try the diamond type of SLAE
+  - [x] try the diamond type of SLAE
     - [x] add diamond sae
     - [x] add dsc1, dsc2, dsc3
     - [x] try different activation function when the dsc layers are three
@@ -111,12 +109,12 @@ Code：noyg
       - [x] try Mish
   - [x] try stacked one layer, instead the dsc1, dsc2, dsc3
   - [x] try two dsc1, see the CLS-accuracy
-  - [x] re-write dsc1, l4->l3, l3->l2, l2->l1, l1->l1, re-do the upper two steps, see the CLS-accuracy
   - [x] try the parallel dsc model under the current circumstance
   - [x] try the jump-connection between different dsc cells
-  - [x] try painting91 resnet50 2048x7x7, see the accuracy
-  - [x] try pandora on vgg16 features
-  - [x] try pandora on resnet50 features
+
+#### Contributor
+
+
 
 
   
