@@ -29,13 +29,14 @@ All the files in 'data', 'features', 'pretrainedModels' and 'backup' are uploade
 #### Code Usages
 
 The full codes will be released after the paper published. All the necessary files can be downloaded from the Baidu Yun link below:
-Link：https://pan.baidu.com/s/1cMUIOUjXKR8-PPpJ0ra3Hw 
-Code：noyg
+Link：https://pan.baidu.com/s/19rkaIOJNgKH3VY2y0nGlKg 
+Code：dwsg
 1. download 'Painting91' into 'data' folder;
 2. download 'pretrainModel' folder into the project root;
 3. download Painting91_resnet_CLS and Painting91_resnet_SLC files into the 'models' folder;
 4. revise the configurations ini run_test.py
 5. python run_test.py
+The training codes and pre-trained models will be released soon.
 
 #### Experiment Results with SOTA
 
