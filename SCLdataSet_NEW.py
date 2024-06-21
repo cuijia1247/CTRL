@@ -63,8 +63,85 @@ class TCFLDataset(Dataset):
                 ### set style levels
                 s_level = self.setLevels(key, styleLevels='Euclidean')
                 self.s_levels[key] = s_level
+            ###
         else:
             self.images = self.readImage(labelFile)
+
+        ### calculate level1, level2, level3
+        # self.level1 = self.getLevel1()
+        # self.level2 = self.getLevel2()
+        # self.level3 = self.getLevel3()
+        # self.level1 = self.getLeveNew2()
+        # self.level2 = self.getLeveNew()
+        # self.level3 = self.getLeveNew()
+        # self.styleSet = self.getStyleSet()
+
+    def getStyleSet(self): #generate the set of every classes
+        pass
+
+    def getLevel1(self):#calculate NN features in level1
+        level1_ = {}
+        for key in self.features.keys():
+            if self.s_levels[key] <= 0: #calculate the NN and save them
+                level1_[key] = self.getNNFeature(self.features[key], 1, self.image_label_list[key])
+            else:
+                level1_[key] = self.features[key]
+        return level1_
+
+    def getLevel2(self):  # calculate NN features in level1
+        level2_ = {}
+        for key in self.features.keys():
+            if self.s_levels[key] <= 1:  # calculate the NN and save them
+                level2_[key] = self.getNNFeature(self.features[key], 2, self.image_label_list[key])
+            else:
+                level2_[key] = self.features[key]
+        return level2_
+
+    def getLevel3(self):  # calculate NN features in level1
+        level3_ = {}
+        for key in self.features.keys():
+            if self.s_levels[key] <= 1:  # calculate the NN and save them
+                level3_[key] = self.getNNFeature(self.features[key], 3, self.image_label_list[key])
+            else:
+                level3_[key] = self.features[key]
+        return level3_
+
+    def getLeveNew(self):#calculate NN features in level1
+        level_ = {}
+        for key in tqdm.tqdm(self.features.keys()):
+            if self.s_levels[key] < 3: #calculate the NN and save them
+                level_[key] = self.getNNFeature(self.features[key], self.s_levels[key]+1, self.image_label_list[key])
+            else:
+                level_[key] = self.features[key]
+        return level_
+
+    def getLeveNew2(self):#calculate NN features in level1
+        level_ = {}
+        for key in tqdm.tqdm(self.features.keys()):
+            if self.s_levels[key] < 3: #calculate the NN and save them
+                level_[key] = self.getNNFeature(self.features[key], 3, self.image_label_list[key])
+            else:
+                level_[key] = self.features[key]
+        return level_
+
+    # def getLeveNewl2(self):  # calculate NN features in level1
+    #     level2_ = {}
+    #     for key in self.features.keys():
+    #         if self.s_levels[key] <= 3:  # calculate the NN and save them
+    #             level2_[key] = self.getNNFeature(self.features[key], 2, self.image_label_list[key])
+    #         else:
+    #             level2_[key] = self.features[key]
+    #     return level2_
+    #
+    # def getLeveNewl3(self):  # calculate NN features in level1
+    #     level3_ = {}
+    #     for key in self.features.keys():
+    #         if self.s_levels[key] <= 3:  # calculate the NN and save them
+    #             level3_[key] = self.getNNFeature(self.features[key], 3, self.image_label_list[key])
+    #         else:
+    #             level3_[key] = self.features[key]
+    #     return level3_
+
 
 
     def getNNFeature(self, x_, sl_, label):#calculate the NN features in sl_
@@ -122,6 +199,11 @@ class TCFLDataset(Dataset):
             return feature, label
         else:#返回的是图像, 图像不设置Levels
             img, label = self.images[index]
+            # if self.transform is not None:
+            #     img_ = cv2.imread(os.path.join(self.imageFolder, image_name))
+            #     img = self.transform(Image.fromarray(img_))
+            # else:
+            #     raise ValueError('Image Tensor ERROR.')
             return img, label
 
     def setLevels(self, key, styleLevels='Random'):#设置风格强度，默认采用随机方式
@@ -194,6 +276,10 @@ class TCFLDataset(Dataset):
         :param data: normally the data are images
         :return:
         """
+        # img = cv2.imread(data)
+        # if img is None:
+        #     print(os.path.join(self.imageFolder, data))
+        #     raise ValueError('Image Path ERROR.')
         img = Image.open(data).convert('RGB')
         data = self.toTransform(img)
         return data
