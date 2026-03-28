@@ -165,3 +165,24 @@ python style_predict.py
 | **TCFL+ResNet50 TOP1** | **69.12** | **56.98** | **51.62** | **69.03** | **77.17**   | **53.94** |
 | TCFL+ResNet50 TOP2   | 85.29     | 76.15   | 69.11    | 81.82     | 87.44          | 68.68    |
 | TCFL+ResNet50 TOP3   | 92.27     | 84.52   | 78.22    | 85.05     | 91.10          | 75.74    |
+
+---
+
+### Citation
+
+If you find this work useful, please cite our paper:
+
+```bibtex
+@article{cui2025community,
+  title     = {Community transferrable representation learning for image style classification},
+  author    = {Cui, Jia and others},
+  journal   = {ACM Transactions on Multimedia Computing, Communications and Applications},
+  volume    = {21},
+  number    = {6},
+  pages     = {1--20},
+  year      = {2025},
+  publisher = {ACM}
+}
+```
+
+> Cui, Jia, et al. "Community transferrable representation learning for image style classification." *ACM Transactions on Multimedia Computing, Communications and Applications* 21.6 (2025): 1–20.
