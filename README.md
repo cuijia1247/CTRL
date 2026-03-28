@@ -55,11 +55,11 @@ The assigned style level determines which **same-class nearest-neighbour** featu
 
 | Dataset | # Classes | Notes |
 |---|---|---|
-| Painting91 | 91 | Classical painting styles |
-| Pandora | — | Diverse artistic styles |
+| Painting91 | 13 | Classical painting styles |
+| Pandora | 12 | Diverse artistic styles |
 | WikiArt3 | 15 | WikiArt subset |
 | FashionStyle14 | 14 | Fashion photography |
-| AVAStyle | — | Aesthetic visual analysis |
+| AVAStyle | 14 | Aesthetic visual analysis |
 | Arch | 25 | Architectural styles |
 | webstyle | 10 | Web-UI design styles |
 
