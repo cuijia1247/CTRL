@@ -1,0 +1,20 @@
+# Large data / model folders — not tracked
+backup/
+features/
+github_codes/
+images/
+imgs/
+models/
+paper_data/
+pretrainModels/
+temp/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Editor / OS
+.idea/
+.vscode/
+*.DS_Store
